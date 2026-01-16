@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+        <title>Clock</title>
+        <link  rel = "stylesheet"  href = "Clock.css">
+        <!-- href = "clockstyle.css" -->
+        </head>
+
+<body>
+    <div class = "container">
+        <div class = "clock">
+                <div class = "hand" style = "--clr : #ff0000" id = "hours"><i></i></div>
+                <div class = "hand" style = "--clr : #000080"  id = "mins"><i></i></div>
+                <div class = "hand"  style = "--clr : #ffffff"  id = "secs"><i></i></div>
+               <span  style = "--i : 1" ><b>1</b></span>
+               <span  style = "--i : 2"><b>2</b></span>
+               <span  style = "--i : 3"><b>3</b></span>
+               <span  style = "--i : 4"><b>4</b></span>
+               <span  style = "--i : 5"><b>5</b></span>
+               <span  style = "--i : 6"><b>6</b></span>
+               <span  style = "--i : 7"><b>7</b></span>
+               <span  style = "--i : 8"><b>8</b></span>
+               <span  style = "--i : 9"><b>9</b></span>
+               <span  style = "--i : 10"><b>10</b></span>
+               <span  style = "--i : 11"><b>11</b></span>
+               <span  style = "--i : 12"><b>12</b></span>
+
+        </div>
+    </div>
+    <script>
+        const hours = document.getElementById("hours");
+    const mins = document.getElementById("mins");
+    const secs = document.getElementById("secs");
+
+    function updateClock() {
+        const now = new Date();
+
+        let h = now.getHours();
+        let m = now.getMinutes();
+        let s = now.getSeconds();
+
+        // Convert time to degrees
+        let hourDeg = (h % 12) * 30 + m * 0.5;   // 360 / 12 = 30
+        let minDeg = m * 6;                      // 360 / 60 = 6
+        let secDeg = s * 6;                      // 360 / 60 = 6
+
+        hours.style.transform = `rotate(${hourDeg}deg)`;
+        mins.style.transform = `rotate(${minDeg}deg)`;
+        secs.style.transform = `rotate(${secDeg}deg)`;
+    }
+
+    // Run clock every second
+    setInterval(updateClock, 1000);
+
+    // Initial call
+    updateClock();
+    </script>
+
+</body>

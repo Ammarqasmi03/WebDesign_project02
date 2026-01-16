@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, #1b2735, #090a0f);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.7),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center dot */
+.clock::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 0 10px #fff;
+}
+
+/* Numbers */
+.clock span {
+    position: absolute;
+    inset: 20px;
+    transform: rotate(calc(30deg * var(--i)));
+    text-align: center;
+}
+
+.clock span b {
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+    font-size: 22px;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+/* Hands base */
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i {
+    position: absolute;
+    width: 6px;
+    height: var(--h);
+    background: var(--clr);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--clr);
+}
+
+/* Individual hand sizes */
+#hours i {
+    width: 8px;
+    height: 80px;
+}
+
+#mins i {
+    width: 6px;
+    height: 110px;
+}
+
+#secs i {
+    width: 3px;
+    height: 140px;
+}
