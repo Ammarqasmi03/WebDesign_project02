@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valiadation form</title>
+</head>
+<link rel="stylesheet" href="form.css">
+<body>
+    <div class="form-class" id="container">
+        <h2 class="validate-class">Validation Form</h2>
+        <form action="" id="validate-form" class="validate-class" onsubmit="return validationform()">
+              <div class="valid-class">
+                <label for="username">Username :</label>
+                <input type="text" id="username" placeholder="Enter the username" name="username"  class="user-pass"><br>
+               <span id="usernameerror" class="error"></span>
+              </div>
+               
+              <div class="valid-class">
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password" placeholder="Enter the password" class="user-pass"><br>
+                <span id="passworderror" class="error"></span>
+              </div>
+               
+               <div class="valid-class">
+                <label for="cpassword">Confirm Password:</label>
+                <input type="password" name="cpassword" id="cpassword" placeholder="Enter the confirm password" class="user-pass"><br>
+                <span id="cpassworderror" class="error"></span>
+               </div>
+               
+               <div class="valid-class">
+                <input type="submit" value="Submit" id="submit-button">  
+               </div>             
+        </form>
+    </div>
+
+    <script>
+        function validationform()
+        {
+           let username = document.getElementById("username").value;
+           let password = document.getElementById("password").value;
+           let cpassword = document.getElementById("cpassword").value;
+           let flag = 1;
+           let a = 1;
+           let b = 1;
+           
+           // Reset error message
+           document.getElementById("usernameerror").innerHTML ="";            
+           document.getElementById("passworderror").innerHTML ="";          
+           document.getElementById("cpassworderror").innerHTML ="";           
+           
+           //username validation
+
+           if(username === "")
+           {
+            document.getElementById("usernameerror").innerHTML= "Username is required . please try again";
+            flag = 0;
+            a=0;
+            b=0;
+           }
+           else if(username.length < 5)
+           {
+            document.getElementById("usernameerror").innerHTML ="Username is requrid minimum 5 character";
+            flag = 0;
+            a=0;
+            b=0;
+           }
+           else{
+            document.getElementById("usernameerror").innerHTML = "";
+            flag = 1;
+            a=1;
+            b=1;
+           }
+
+           //passowrd validation
+
+           if(password === "")
+           {
+            document.getElementById("passworderror").innerHTML = "password is required please try again";
+            flag = 0;
+            a=0;
+           }
+           else if(password.length < 8)
+           {
+            document.getElementById("passworderror").innerHTML = "Password is requrid minimum 8 character";
+            flag = 0;
+            a=0;
+           }
+           else if (password !== cpassword)
+           {
+            document.getElementById("cpassworderror").innerHTML = "Password do not match";
+                flag = 0;
+           }
+           else
+           {
+            document.getElementById("passworderror").innerHTML = "";
+            document.getElementById("cpassworderror").innerHTML ="";
+            flag = 1;
+            a=1;
+           }
+
+
+           
+           if(flag==1 && a==1 && b==1)
+           {
+               
+            return true;
+            
+           }   
+           else
+           {
+               return false;
+           }
+          
+
+        }
+        
+        
+    </script>
+
+</body>
+</html>
