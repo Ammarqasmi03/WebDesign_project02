@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.border {
+    border: 1px solid transparent;
+    padding: 5px;
+}
+.border:hover {
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.nav-logo {
+    width: 120px;
+}
+.logo {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg");
+    background-size: cover;
+    height: 40px;
+}
+
+/* ---------- ADDRESS ---------- */
+.add-first {
+    font-size: 12px;
+    color: #ccc;
+}
+.add-second {
+    font-size: 14px;
+    font-weight: bold;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ---------- SEARCH ---------- */
+.nav-search {
+    display: flex;
+    width: 600px;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.all {
+    width: 50px;
+    border: none;
+    background: #e6e6e6;
+}
+.search {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+}
+.search-icon {
+    width: 45px;
+    background: #febd69;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-icon:hover {
+    background: #f3a847;
+}
+
+/* ---------- LANGUAGE ---------- */
+.nav-lang {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.lang-img {
+    width: 20px;
+    height: 14px;
+    background-image: url("https://flagcdn.com/w20/us.png");
+    background-size: cover;
+}
+
+/* ---------- SIGN IN ---------- */
+.first-para {
+    font-size: 12px;
+}
+.second-para {
+    font-size: 14px;
+    font-weight: bold;
+}
+.account {
+    display: flex;
+    align-items: center;
+}
+
+/* ---------- CART ---------- */
+.nav-card {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ---------- SECOND NAV ---------- */
+.navbar2 {
+    height: 40px;
+    background: #232f3e;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.bar-div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.list-items {
+    display: flex;
+    list-style: none;
+}
+.list-item {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+/* ---------- HERO IMAGE ---------- */
+.image img {
+    width: 100%;
+}
+
+.contain {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    margin: -60px auto 20px;
+    width: 90%;
+    position: relative;
+}
+
+/* ---------- PRODUCT SECTIONS ---------- */
+.item-images-1,
+.item-image-2 {
+    display: flex;
+    justify-content: space-evenly;
+    background: #e3e6e6;
+    padding: 20px;
+}
+
+.img1 {
+    background: white;
+    padding: 15px;
+    width: 30%;
+}
+.img1 h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.img {
+    width: 100%;
+}
+.anchor {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007185;
+    text-decoration: none;
+}
+.anchor:hover {
+    color: #c7511f;
+}
+
+/* ---------- BACK TO TOP ---------- */
+.back {
+    background: #37475a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+}
+.back:hover {
+    background: #485769;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #232f3e;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.list ul {
+    list-style: none;
+}
+.list h1 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.list a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+.list a:hover {
+    text-decoration: underline;
+}
