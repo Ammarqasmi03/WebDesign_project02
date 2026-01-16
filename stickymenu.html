@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+        <title>Sticky menu</title>
+        </head>
+        <style>
+            body
+{
+     margin : 0px;
+     padding : 50px 0px 0px;
+}
+
+#menu
+{
+     text-align : center;
+     padding : 50px  100px  100px;
+}
+h1
+{
+        text-align : center;
+        text-decoration : underline;
+        font-size : 40px;
+        margin-top  :  100px ;
+}
+img
+{
+      height : auto;
+      width : 100%;
+      margin-top : 50px;
+
+}
+p
+{
+     text-align : center;
+     text-align : justify;
+     width : 100%;
+     height : auto;
+     margin-top : 100px;
+}
+#header
+{
+   text-align : center;
+}
+
+#logo
+{
+     width : 250px;
+   height : auto;
+   border :  transparent;
+}
+
+#menu-bar
+{
+   margin : 0px;
+   background : #008080;
+   font-size : 20px;
+   font-weight : bold;
+   color : white;
+   text-align : center;
+    height : 50px;
+    width : 100%;
+}
+.nav
+{
+   display : inline-block;
+  margin-left : 20px;
+  text-align : center;
+  margin-top : 16px;
+}
+
+.sticky
+{
+     position : fixed;
+     top : 0;
+     width : 100%;
+}
+        </style>
+        <body>
+             <div id = "header">
+                 <img id = "logo"  src =  "https://www.color-meanings.com/wp-content/uploads/2022/11/Green-nature-logo-1024x1022.jpeg">
+              </div>
+             <nav id = "menu-bar">
+                 <li class = "nav">Home</li>
+                 <li class = "nav">About Us</li>
+                 <li class = "nav">Our Team</li>
+                 <li class = "nav">Client</li>
+                 <li class = "nav">Contact Us</li>
+             </nav>
+             <div id = "menu">
+                    <h1>About us</h1>
+                 <img src = "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg">
+                   <p>
+                       An essay (sometimes called an academic essay or expository essay) explores a topic and reaches a conclusion. It needs to contain a central argument which is your answer to the question or topic. The argument must be based on reliable evidence and be supported throughout your essay. You need to go beyond just describing and summarising, you must critically analyse the topic.
+Content
+The content of an essay is based around research of the topic. This means explaining and justifying your ideas based on information and examples from reliable sources. It is important that your essay has a central idea or argument that the essay content is focussed on. This is known as a thesis statement.
+
+Depending on the essay question, the essay may contain:
+
+a thesis statement (claim, proposition, main idea)
+context (background, framework, setting)
+reasons (support, evidence, examples)
+counter-arguments (objections, contrary considerations)
+responses (refutations, answers to objections)
+                   </p>
+                 </div>
+
+       <script>
+
+           window.addEventListener('scroll' , function()
+               {      let  menu = document.getElementById('menu-bar');
+                    if(window.pageYOffset >= 393.5)
+                         {
+                                menu.classList.add('sticky');
+
+                         }
+                    else
+                    {
+                        menu.classList.remove('sticky');
+                    }
+               });
+
+       </script>
+        </body>
