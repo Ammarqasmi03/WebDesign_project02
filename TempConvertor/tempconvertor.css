@@ -1,0 +1,69 @@
+body
+{
+                      padding : 100px  100px;
+                      background : black;
+
+}
+
+h1
+{
+   text-align : center;
+   color : #808080;
+}
+
+#container
+{
+
+     background : #008080;
+     text-align : center;
+     padding : 50px 100px 100px;
+}
+.CFK
+{
+      display : inline-block;
+      margin : 25px;
+}
+
+.input
+{       font-size : 50px;
+     text-align : center;
+     height : 100px;
+     width : 300px;
+     background : rgb(0,0,0);
+     color : rgb(255,255,255);
+}
+select
+{
+      height : 50px;
+      width : 300px;
+      font-size : 40px;
+      box-shadow : -5px -5px 10px  rgb(255,255,255);
+      text-align : center;
+       background : rgb(255,100,0);
+     color : rgb(255,255,255);
+     margin : 5px;
+}
+
+
+
+textarea
+{
+     text-align : center;
+     height : 100px;
+     width : 100%;
+     border-radius : 10%;
+     border : 2px solid blue ;
+     font-size : 20px;
+}
+
+p
+{
+     text-align : center;
+     margin : 2px;
+     background : rgb(o,o,10);
+     color : white;
+     border : 1px solid white;
+
+}
+
+
