@@ -1,0 +1,84 @@
+body
+{
+   margin : 0px;
+   padding : 0px;
+    display : flex;
+    justify-content : center;
+    align-item : center;
+    height :100vh;
+}
+#container
+{
+    margin : 100px;
+    width : 300px;
+    height : 400px;
+    background-image : linear-gradient(#ff00ff, rgba(0,0,240,0.5));
+    border : 1px solid transparent;
+    border-radius : 15%;
+}
+
+#countno
+{
+   margin : 25px;
+
+   background : rgba(0,0,0);
+   text-align : center;
+   width : 240px;
+   height : 140px;
+   border-radius : 35%;
+}
+
+span
+{
+    width : 200px;
+    height : 70px;
+    border : 3px solid white;
+    border-radius : 5%;
+    background : rgba(0,100,0,0.5);
+    margin : 0px;
+    display : inline-block;
+    color : rgba(0,0,0,0.7);
+    font-size : 60px;
+    text-align : right;
+}
+p
+{
+    color : white;
+
+}
+
+.number
+{
+  margin: 10px;
+  margin-top : 2px;
+
+   display : inline-block;
+
+}
+
+#count
+{
+    margin  : 30px;
+   padding : 50px;
+   text-align : center;
+   width : 150px;
+   height : 150px;
+   border : 20px solid rgba(0,10,10,0.9);
+   border-radius : 100%;
+   background : rgba(200,200,200,0.9);
+    cursor : pointer;
+}
+
+#reset
+{
+
+
+   margin : 0px;
+   padding-top : 0px;
+   width : 50px;
+   height : 50px;
+   border : 7px solid rgba(0,10,10,0.9);
+   border-radius : 100%;
+   background : rgba(200,200,200,0.9);
+   cursor : pointer;
+}

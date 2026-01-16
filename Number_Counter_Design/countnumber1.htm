@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+        <title>Button Tasbeeh</title>
+        </head>
+        <style>
+body
+{
+   margin : 0px;
+   padding : 0px;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    height :100vh;
+    background-color: black;
+}
+#container
+{
+    margin : 100px;
+    width : 300px;
+    height : 400px;
+    background-image : linear-gradient(#ff00ff, rgba(0,0,240,0.5));
+    border : 1px solid transparent;
+    border-radius : 15%;
+}
+
+#countno
+{
+   margin : 25px;
+
+   background : rgba(0,0,0);
+   text-align : center;
+   width : 240px;
+   height : 140px;
+   border-radius : 35%;
+}
+
+span
+{
+    width : 200px;
+    height : 70px;
+    border : 3px solid white;
+    border-radius : 5%;
+    background : rgba(0,100,0,0.5);
+    margin : 0px;
+    display : inline-block;
+    color : rgba(0,0,0,0.7);
+    font-size : 60px;
+    text-align : right;
+}
+p
+{
+    color : white;
+
+}
+
+.number
+{
+  margin: 10px;
+  margin-top : 2px;
+
+   display : inline-block;
+
+}
+
+#count
+{
+    margin  : 30px;
+   padding : 50px;
+   text-align : center;
+   width : 150px;
+   height : 150px;
+   border : 20px solid rgba(0,10,10,0.9);
+   border-radius : 100%;
+   background : rgba(200,200,200,0.9);
+    cursor : pointer;
+}
+
+#reset
+{
+
+
+   margin : 0px;
+   padding-top : 0px;
+   width : 50px;
+   height : 50px;
+   border : 7px solid rgba(0,10,10,0.9);
+   border-radius : 100%;
+   background : rgba(200,200,200,0.9);
+   cursor : pointer;
+}
+
+        </style>
+        <!--<link  rel = "stylesheet"  href = "C:\Users\Delight\Desktop\numbercounter.css">-->
+            <body>
+         <div id = container>
+             <div id="countno">
+                 <p>Fivet Tasbeeh</p>
+                 <span id = "inputnumber" type ="number"></span>
+                 <p class = "number">COUNT</p>
+                 <p class = "number">RESET</p>
+                 </div>
+             <button id = "count" onclick = "countnumber();"></button>
+             <button id = "reset" onclick = "resetnumber(); " ondblclick = "offnumber();"></button>
+         </div>
+         <script>
+
+
+function resetnumber()
+{
+    document.getElementById('inputnumber').innerHTML  = 0;
+    a=0;
+}
+
+let a =0;
+function countnumber()
+{
+
+    a += 1;
+
+    document.getElementById('inputnumber').innerHTML = a;
+}
+
+function offnumber()
+{
+    document.getElementById('inputnumber').innerHTML = " ";
+    a=0;
+}
+
+</script>
+         
+</body>
+
+
